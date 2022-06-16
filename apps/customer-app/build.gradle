@@ -26,8 +26,10 @@ dependencies {
     implementation(project(':domains:customer'))
 
     //DB only
-    implementation("io.micronaut.sql:micronaut-jdbc-tomcat")
-    runtimeOnly("com.h2database:h2")
+    annotationProcessor('io.micronaut.data:micronaut-data-processor:3.4.2')
+    implementation('io.micronaut.data:micronaut-data-hibernate-jpa:3.4.2')
+    implementation('io.micronaut.sql:micronaut-jdbc-tomcat:4.4.0')
+    runtimeOnly('mysql:mysql-connector-java:8.0.29')
 }
 
 application {

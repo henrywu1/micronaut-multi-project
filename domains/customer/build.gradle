@@ -11,8 +11,8 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.micronaut.data:micronaut-data-processor")
-    implementation("io.micronaut.data:micronaut-data-jdbc")
+    annotationProcessor('io.micronaut.data:micronaut-data-processor:3.4.2')
+    implementation('io.micronaut.data:micronaut-data-hibernate-jpa:3.4.2')
 }
 
 java {
@@ -21,4 +21,6 @@ java {
 }
 
 graalvmNative.toolchainDetection = false
-
+micronaut {
+    version = '3.5.1'
+}
