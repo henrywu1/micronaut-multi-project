@@ -1,0 +1,5 @@
+rootProject.name = "henPlatform"
+
+include 'apps:customer-app'
+include 'common:logging'
+include 'domains:customer'

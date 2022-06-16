@@ -1,0 +1,24 @@
+plugins {
+    id("groovy")
+    id("io.micronaut.library") version "3.4.1"
+}
+
+version = "0.1"
+group = "com.henry"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly("io.micronaut.data:micronaut-data-processor")
+    implementation("io.micronaut.data:micronaut-data-jdbc")
+}
+
+java {
+    sourceCompatibility = JavaVersion.toVersion("11")
+    targetCompatibility = JavaVersion.toVersion("11")
+}
+
+graalvmNative.toolchainDetection = false
+
